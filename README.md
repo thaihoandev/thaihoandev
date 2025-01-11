@@ -74,14 +74,23 @@
 </p>
 
 <hr>
-
 <h2 align="center">👨‍💻 Repositories 👨‍💻</h2>
 <br>
 <div width="100%" align="center">
-  <a align="left" href="https://github.com/thaihoandev/awesome-project" title="Awesome Project"><img align="left" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=thaihoandev&repo=awesome-project&theme=react&border_color=61dafb&border_radius=10"></a>
-  <a align="right" href="https://github.com/thaihoandev/portfolio" title="Portfolio"><img align="right" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=thaihoandev&repo=portfolio&theme=react&border_color=61dafb&border_radius=10"></a>
+  <a align="left" href="https://github.com/zumrudu-anka/Algorithms" title="Algorithms"><img align="left" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=zumrudu-anka&repo=Algorithms&theme=react&border_color=61dafb&border_radius=10"></a><a align="right" href="https://github.com/zumrudu-anka/DataStructures" title="Data Structures"><img align="right" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=zumrudu-anka&repo=DataStructures&theme=react&border_color=61dafb&border_radius=10"></a>
 </div>
 <br/><br/><br/><br/><br/><br/>
+<div width="100%" align="center">
+  <a align="left" href="https://github.com/thaihoandev/KKUN_Booking" title="KKUNBooking Project"><img align="left" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=thaihoandev&repo=KKUN_Booking&theme=react&border_color=61dafb&border_radius=10"></a>
+  <a align="right" href="https://github.com/thaihoandev/Minine_Accessories_DACS_K21" title="Minine Accessories"><img align="right" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=thaihoandev&repo=Minine_Accessories_DACS_K21&theme=react&border_color=61dafb&border_radius=10"></a>
+</div>
+<br/><br/><br/><br/><br/><br/>
+<div width="100%" align="center">
+  <a align="left" href="https://github.com/thaihoandev/KKUN_Booking_FE" title="KKUNBooking Front-end Project"><img align="left" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=thaihoandev&repo=KKUN_Booking_FE&theme=react&border_color=61dafb&border_radius=10"></a>
+  <a align="right" href="https://github.com/thaihoandev/hotel_booking_rasa" title="hotel booking rasa"><img align="right" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=thaihoandev&repo=hotel_booking_rasa&theme=react&border_color=61dafb&border_radius=10"></a>
+</div>
+<br/><br/><br/><br/><br/><br/>
+
 <h4 align="center">
   <a href="https://github.com/thaihoandev?tab=repositories" title="Show Repositories">🔎 Show More 🔍</a>
 </h4>
