@@ -2,12 +2,12 @@
 
 <h1 align="center">
   <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.herokuapp.com/?lines=Hello,+There!+👋;This+is+Ngô+Thái+Hoàn....;Nice+to+meet+you!&center=true&size=30">
+    <img src="https://readme-typing-svg.herokuapp.com/?lines=Hello,+There!+👋;This+is+Ngô+Thái+Hoàn....;Nice+to+meet+you!&center=true&size=28">
   </a>
 </h1>
 
 <h5 align="center">
-  <code><a href="https://www.linkedin.com/in/ngothaihoan/" title="LinkedIn Profile"><img width="22" src="images/linkedin.svg"> LinkedIn</a></code>
+  <code><a href="https://www.linkedin.com/in/ngothaihoan" title="LinkedIn Profile"><img width="22" src="images/linkedin.svg"> LinkedIn</a></code>
   <code><a href="https://github.com/ngothaihoan" title="GitHub Profile"><img width="22" src="images/github.svg"> GitHub</a></code>
 </h5>
 <br>
@@ -21,9 +21,9 @@
   <br>
   🌱 I’m currently learning more about full-stack development and exploring cloud technologies.
   <br>
-  💬 Feel free to ask me anything from <a href="https://github.com/ngothaihoan/ngothaihoan/issues" title="Issues">Here</a>.
+  💬 Feel free to ask me anything from <a href="https://github.com/thaihoandev" title="Issues">Here</a>.
   <br>
-  📫 How to reach me: <a href="mailto:ngothaihoan@example.com">ngothaihoan@example.com</a>
+  📫 How to reach me: <a href="mailto:ngothaihoan@example.com">ngothaihoan1103@gmail.com</a>
 </p>
 
 <hr>
