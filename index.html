@@ -12,23 +12,22 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Consolas', 'Courier New', monospace; /* Font giống mã code */
-      font-size: 0.9rem; /* Giảm kích thước font cho phù hợp */
-      background-color: #071124; /* Darker blue background */
-      color: #ffffff; /* White text for contrast */
-      padding-top: 70px; /* Account for fixed navbar */
+      font-family: 'Consolas', 'Courier New', monospace;
+      font-size: 0.9rem;
+      background-color: #071124;
+      color: #ffffff;
+      padding-top: 70px;
     }
     /* Header Styles */
     .navbar {
-      background-color: rgba(7, 17, 36, 0.95); /* Slightly more opaque darker blue */
+      background-color: rgba(7, 17, 36, 0.95);
       padding: 1rem 2rem;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Stronger shadow */
-      backdrop-filter: blur(10px); /* Blur effect for navbar */
-      border-bottom: 1px solid #8b0000; /* Dark red border for definition */
-      border-radius: 15px 15px 0 0; /* Bo tròn góc trên */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #8b0000;
     }
     .navbar-brand {
-      font-size: 1.2rem; /* Điều chỉnh kích thước cho phù hợp với font monospace */
+      font-size: 1.2rem;
       font-weight: 700;
       color: #ffd700 !important;
       transition: color 0.3s ease, transform 0.3s ease;
@@ -38,7 +37,7 @@
       transform: scale(1.05);
     }
     .nav-link {
-      color: #d3d8de !important; /* Lighter gray for better readability */
+      color: #d3d8de !important;
       font-weight: 600;
       margin-left: 1.5rem;
       position: relative;
@@ -51,28 +50,28 @@
       height: 2px;
       bottom: -2px;
       left: 0;
-      background-color: #8b0000; /* Dark red underline */
+      background-color: #8b0000;
       transition: width 0.3s ease;
     }
     .nav-link:hover, .nav-link.active {
       color: #ffd700 !important;
       transform: translateY(-2px);
     }
-    .nav-link:hover::after {
+    .nav-link:hover::after, .nav-link.active::after {
       width: 100%;
     }
     .nav-icon {
       margin-left: 1rem;
-      color: #d3d8de; /* Lighter gray for icons */
+      color: #d3d8de;
       transition: color 0.3s ease, transform 0.3s ease;
     }
     .nav-icon:hover {
-      color: #8b0000; /* Dark red on hover */
+      color: #8b0000;
       transform: scale(1.2);
     }
     /* Hero Section */
     .hero-section {
-      background: linear-gradient(135deg, #1e3a8a, #4c0519); /* Dark blue to dark red gradient */
+      background: linear-gradient(135deg, #1e3a8a, #4c0519);
       color: #ffffff;
       padding: 0;
       text-align: center;
@@ -90,7 +89,7 @@
     }
     /* About Section */
     #about {
-      background-color: #071124; /* Match body background */
+      background-color: #071124;
       color: #ffffff;
       padding: 60px 0;
     }
@@ -98,28 +97,28 @@
       padding: 2rem;
     }
     .about-card {
-      background-color: #0a192f; /* Previous body background */
-      color: #ffffff; /* White text */
-      border-radius: 15px; /* Bo tròn viền card */
+      background-color: #0a192f;
+      color: #ffffff;
+      border-radius: 15px;
       padding: 1.5rem;
       margin: 1rem 0;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       height: 100%;
-      box-shadow: 0 8px 20px rgba(139, 0, 0, 0.3), 0 0 15px rgba(139, 0, 0, 0.15); /* Adjusted shadow for better visibility */
-      cursor: pointer; /* Add cursor pointer for interactivity */
+      box-shadow: 0 8px 20px rgba(139, 0, 0, 0.3), 0 0 15px rgba(139, 0, 0, 0.15);
+      cursor: pointer;
     }
     .about-card:hover {
-      transform: translateY(-10px) scale(1.05); /* Add scale for UI/UX improvement */
-      box-shadow: 0 12px 30px rgba(139, 0, 0, 0.4), 0 0 20px rgba(139, 0, 0, 0.2); /* Stronger shadow on hover */
+      transform: translateY(-10px) scale(1.05);
+      box-shadow: 0 12px 30px rgba(139, 0, 0, 0.4), 0 0 20px rgba(139, 0, 0, 0.2);
     }
     .about-card i {
-      font-size: 1.5rem; /* Điều chỉnh kích thước icon cho phù hợp với font mới */
+      font-size: 1.5rem;
       margin-bottom: 1rem;
-      color: #8b0000; /* Dark red icons */
+      color: #8b0000;
       transition: color 0.3s ease;
     }
     .about-card:hover i {
-      color: #ffd700; /* Change icon color on hover for better UX */
+      color: #ffd700;
     }
     /* Experience Section */
     #experience {
@@ -135,7 +134,7 @@
       content: '';
       position: absolute;
       width: 6px;
-      background-color: #8b0000; /* Dark red timeline */
+      background-color: #8b0000;
       top: 0;
       bottom: 0;
       left: 50%;
@@ -170,74 +169,74 @@
     }
     .timeline-content {
       padding: 20px 30px;
-      background-color: #0a192f; /* Previous body background */
-      color: #ffffff; /* White text */
+      background-color: #0a192f;
+      color: #ffffff;
       position: relative;
-      border-radius: 15px; /* Bo tròn viền card */
-      box-shadow: 0 8px 20px rgba(139, 0, 0, 0.3), 0 0 15px rgba(139, 0, 0, 0.15); /* Adjusted shadow */
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(139, 0, 0, 0.3), 0 0 15px rgba(139, 0, 0, 0.15);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: pointer; /* Add cursor pointer for interactivity */
+      cursor: pointer;
     }
     .timeline-content:hover {
-      transform: translateY(-5px) scale(1.02); /* Add slight scale for UI/UX improvement */
-      box-shadow: 0 12px 30px rgba(139, 0, 0, 0.4), 0 0 20px rgba(139, 0, 0, 0.2); /* Stronger shadow on hover */
+      transform: translateY(-5px) scale(1.02);
+      box-shadow: 0 12px 30px rgba(139, 0, 0, 0.4), 0 0 20px rgba(139, 0, 0, 0.2);
     }
     /* Section Header */
     .section-header {
-      font-size: 1.8rem; /* Điều chỉnh kích thước tiêu đề cho phù hợp với font monospace */
+      font-size: 1.8rem;
       font-weight: 700;
       margin-bottom: 1.5rem;
       color: #ffffff;
       position: relative;
-      backdrop-filter: blur(5px); /* Blur effect for headers */
+      backdrop-filter: blur(5px);
       padding: 0.5rem 1rem;
       display: inline-block;
-      text-shadow: 0 0 5px rgba(139, 0, 0, 0.3); /* Subtle text shadow for headers */
-      border-radius: 10px; /* Bo tròn viền tiêu đề */
+      text-shadow: 0 0 5px rgba(139, 0, 0, 0.3);
+      border-radius: 10px;
     }
     .section-header i {
       margin-right: 0.5rem;
-      color: #8b0000; /* Dark red icon */
-      font-size: 1.5rem; /* Điều chỉnh kích thước icon */
+      color: #8b0000;
+      font-size: 1.5rem;
     }
     /* Card Hover Effects */
     .card {
-      background-color: #0a192f; /* Previous body background */
-      color: #ffffff; /* White text */
+      background-color: #0a192f;
+      color: #ffffff;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      box-shadow: 0 8px 20px rgba(139, 0, 0, 0.3), 0 0 15px rgba(139, 0, 0, 0.15); /* Adjusted shadow */
-      border-radius: 15px; /* Bo tròn viền card */
-      cursor: pointer; /* Add cursor pointer for interactivity */
+      box-shadow: 0 8px 20px rgba(139, 0, 0, 0.3), 0 0 15px rgba(139, 0, 0, 0.15);
+      border-radius: 15px;
+      cursor: pointer;
     }
     .card:hover {
-      transform: translateY(-10px) scale(1.02); /* Add slight scale for UI/UX improvement */
-      box-shadow: 0 12px 30px rgba(139, 0, 0, 0.4), 0 0 20px rgba(139, 0, 0, 0.2); /* Stronger shadow on hover */
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 12px 30px rgba(139, 0, 0, 0.4), 0 0 20px rgba(139, 0, 0, 0.2);
     }
     /* Skill Card Styles */
     .skill-card {
       padding: 1rem;
       text-align: center;
-      background-color: #0a192f; /* Previous body background */
-      color: #ffffff; /* White text */
-      border-radius: 15px; /* Bo tròn viền card */
+      background-color: #0a192f;
+      color: #ffffff;
+      border-radius: 15px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      box-shadow: 0 8px 20px rgba(139, 0, 0, 0.3), 0 0 15px rgba(139, 0, 0, 0.15); /* Adjusted shadow */
-      cursor: pointer; /* Add cursor pointer for interactivity */
+      box-shadow: 0 8px 20px rgba(139, 0, 0, 0.3), 0 0 15px rgba(139, 0, 0, 0.15);
+      cursor: pointer;
     }
     .skill-card:hover {
-      transform: scale(1.1); /* Keep scale for hover */
-      box-shadow: 0 12px 30px rgba(139, 0, 0, 0.4), 0 0 20px rgba(139, 0, 0, 0.2); /* Stronger shadow on hover */
+      transform: scale(1.1);
+      box-shadow: 0 12px 30px rgba(139, 0, 0, 0.4), 0 0 20px rgba(139, 0, 0, 0.2);
     }
     /* Nav Pills for Skills */
     .nav-pills .nav-link {
       background-color: #0a192f;
       color: #ffffff;
-      border-radius: 20px; /* Bo tròn viền nav-link */
-      border: 1px solid #8b0000; /* Dark red border for definition */
-      font-size: 0.9rem; /* Điều chỉnh kích thước font */
+      border-radius: 20px;
+      border: 1px solid #8b0000;
+      font-size: 0.9rem;
     }
     .nav-pills .nav-link.active {
-      background-color: #8b0000; /* Dark red for active tab */
+      background-color: #8b0000;
       color: #ffffff;
       border: none;
     }
@@ -253,31 +252,31 @@
     }
     /* Custom Button */
     .btn-custom {
-      background-color: #8b0000; /* Dark red button */
+      background-color: #8b0000;
       color: #ffffff;
       transition: background-color 0.3s ease, transform 0.3s ease;
-      border: 1px solid #a11212; /* Darker red border */
-      border-radius: 10px; /* Bo tròn viền button */
-      font-size: 0.9rem; /* Điều chỉnh kích thước font */
+      border: 1px solid #a11212;
+      border-radius: 10px;
+      font-size: 0.9rem;
     }
     .btn-custom:hover {
-      background-color: #a11212; /* Lighter dark red on hover */
+      background-color: #a11212;
       transform: scale(1.05);
     }
     /* Tech Stack Badges */
     .tech-badge {
       display: inline-block;
-      background-color: #0a192f; /* Previous body background */
-      color: #ffffff; /* White text */
+      background-color: #0a192f;
+      color: #ffffff;
       padding: 0.3rem 0.8rem;
       margin: 0.2rem;
-      border-radius: 12px; /* Bo tròn viền badge */
-      font-size: 0.9rem; /* Điều chỉnh kích thước font */
+      border-radius: 12px;
+      font-size: 0.9rem;
       transition: background-color 0.3s ease;
-      box-shadow: 0 4px 10px rgba(139, 0, 0, 0.3); /* Adjusted shadow for badges */
+      box-shadow: 0 4px 10px rgba(139, 0, 0, 0.3);
     }
     .tech-badge:hover {
-      background-color: #8b0000; /* Dark red on hover */
+      background-color: #8b0000;
     }
     /* Contact Section */
     #contact {
@@ -285,31 +284,82 @@
       padding: 60px 0;
       background-color: #071124;
     }
+    /* Scroll to Top Button */
+    #scrollToTop {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #8b0000;
+      color: #ffffff;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+    #scrollToTop:hover {
+      background-color: #a11212;
+      transform: scale(1.1);
+    }
+    #scrollToTop.visible {
+      opacity: 1;
+      visibility: visible;
+    }
     /* Footer */
     footer {
       background-color: #0a192f;
-      border-top: 1px solid #8b0000; /* Dark red border */
-      border-radius: 0 0 15px 15px; /* Bo tròn góc dưới */
+      padding: 2rem 0;
+      border-top: 1px solid #8b0000;
+    }
+    footer .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    footer .footer-section {
+      flex: 1;
+      min-width: 200px;
+      margin: 0 1rem;
+    }
+    footer .footer-section.social a {
+      color: #ffffff;
+      margin: 0 0.5rem;
+      transition: color 0.3s ease;
+    }
+    footer .footer-section.social a:hover {
+      color: #8b0000;
+    }
+    footer .footer-section.contact p {
+      margin: 0;
     }
     .bg-primary {
-      background-color: #8b0000 !important; /* Override to dark red for theme consistency */
-      border-radius: 15px; /* Bo tròn viền background primary */
+      background-color: #8b0000 !important;
+      border-radius: 15px;
     }
     .text-primary {
-      color: #8b0000 !important; /* Dark red text */
+      color: #8b0000 !important;
     }
     .btn-outline-primary {
       color: #8b0000;
       border-color: #8b0000;
-      border-radius: 10px; /* Bo tròn viền button outline */
-      font-size: 0.9rem; /* Điều chỉnh kích thước font */
+      border-radius: 10px;
+      font-size: 0.9rem;
     }
     .btn-outline-primary:hover {
       background-color: #8b0000;
       color: #ffffff;
     }
     .fs-4 {
-      font-size: 1.2rem !important; /* Điều chỉnh kích thước icon cho phù hợp với font mới */
+      font-size: 1.2rem !important;
     }
   </style>
 </head>
@@ -426,10 +476,7 @@
               <h3 class="mb-1"><i class="fas fa-briefcase me-2"></i>Backend Developer Intern</h3>
               <small><i class="fas fa-calendar"></i> 05/2025 – 07/2025 <i class="fas fa-map-marker-alt"></i> HCM, Viet Nam</small>
             </div>
-
-            <!-- Body -->
             <div class="p-4">
-              <!-- Features as grid -->
               <div class="row g-3 mb-4">
                 <div class="col-md-12">
                   <div class="d-flex">
@@ -447,8 +494,6 @@
                   </div>
                 </div>
               </div>
-
-              <!-- Tech Stack Badges -->
               <p class="mt-3"><strong><i class="fas fa-code"></i> Technologies Used:</strong> 
                 <span class="tech-badge">Python</span>
                 <span class="tech-badge">Flask</span>
@@ -457,13 +502,7 @@
                 <span class="tech-badge">Celery</span>
                 <span class="tech-badge">ReactJS</span>
               </p>
-
-              <!-- Website Link -->
-              <a
-                href="https://httvat.com"
-                class="btn btn-outline-primary"
-                target="_blank"
-              >
+              <a href="https://httvat.com" class="btn btn-outline-primary" target="_blank">
                 <i class="fas fa-globe"></i> Website
               </a>
             </div>
@@ -497,137 +536,61 @@
           <button class="nav-link" id="tools-tab" data-bs-toggle="pill" data-bs-target="#tools" type="button" role="tab" aria-controls="tools" aria-selected="false">Tools</button>
         </li>
       </ul>
-
       <div class="tab-content" id="skillTabsContent">
-        <!-- All Tab -->
         <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
           <div class="row g-3">
-            <div class="col-6 col-md-4 col-lg-2">
-              <div class="skill-card">Java</div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-2">
-              <div class="skill-card">C#</div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-2">
-              <div class="skill-card">JavaScript</div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-2">
-              <div class="skill-card">Python</div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-2">
-              <div class="skill-card">Spring Boot</div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-2">
-              <div class="skill-card">Spring MVC</div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-2">
-              <div class="skill-card">Java Swing</div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-2">
-              <div class="skill-card">ASP.NET</div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-2">
-              <div class="skill-card">Flask</div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-2">
-              <div class="skill-card">React</div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-2">
-              <div class="skill-card">Bootstrap</div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-2">
-              <div class="skill-card">PostgreSQL</div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-2">
-              <div class="skill-card">MySQL</div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-2">
-              <div class="skill-card">Git</div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-2">
-              <div class="skill-card">Postman</div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-2">
-              <div class="skill-card">Vite</div>
-            </div>
+            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">Java</div></div>
+            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">C#</div></div>
+            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">JavaScript</div></div>
+            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">Python</div></div>
+            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">Spring Boot</div></div>
+            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">Spring MVC</div></div>
+            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">Java Swing</div></div>
+            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">ASP.NET</div></div>
+            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">Flask</div></div>
+            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">React</div></div>
+            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">Bootstrap</div></div>
+            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">PostgreSQL</div></div>
+            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">MySQL</div></div>
+            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">Git</div></div>
+            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">Postman</div></div>
+            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">Vite</div></div>
           </div>
         </div>
-
-        <!-- Frontend Tab -->
         <div class="tab-pane fade" id="frontend" role="tabpanel" aria-labelledby="frontend-tab">
           <div class="row g-3">
-            <div class="col-6 col-md-4 col-lg-2">
-              <div class="skill-card">React</div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-2">
-              <div class="skill-card">Bootstrap</div>
-            </div>
+            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">React</div></div>
+            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">Bootstrap</div></div>
           </div>
         </div>
-
-        <!-- Backend Tab -->
         <div class="tab-pane fade" id="backend" role="tabpanel" aria-labelledby="backend-tab">
           <div class="row g-3">
-            <div class="col-6 col-md-4 col-lg-2">
-              <div class="skill-card">Spring Boot</div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-2">
-              <div class="skill-card">Spring MVC</div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-2">
-              <div class="skill-card">Java Swing</div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-2">
-              <div class="skill-card">ASP.NET</div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-2">
-              <div class="skill-card">Flask</div>
-            </div>
+            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">Spring Boot</div></div>
+            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">Spring MVC</div></div>
+            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">Java Swing</div></div>
+            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">ASP.NET</div></div>
+            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">Flask</div></div>
           </div>
         </div>
-
-        <!-- Languages Tab -->
         <div class="tab-pane fade" id="languages" role="tabpanel" aria-labelledby="languages-tab">
           <div class="row g-3">
-            <div class="col-6 col-md-4 col-lg-2">
-              <div class="skill-card">Java</div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-2">
-              <div class="skill-card">C#</div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-2">
-              <div class="skill-card">JavaScript</div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-2">
-              <div class="skill-card">Python</div>
-            </div>
+            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">Java</div></div>
+            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">C#</div></div>
+            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">JavaScript</div></div>
+            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">Python</div></div>
           </div>
         </div>
-
-        <!-- Databases Tab -->
         <div class="tab-pane fade" id="databases" role="tabpanel" aria-labelledby="databases-tab">
           <div class="row g-3">
-            <div class="col-6 col-md-4 col-lg-2">
-              <div class="skill-card">PostgreSQL</div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-2">
-              <div class="skill-card">MySQL</div>
-            </div>
+            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">PostgreSQL</div></div>
+            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">MySQL</div></div>
           </div>
         </div>
-
-        <!-- Tools Tab -->
         <div class="tab-pane fade" id="tools" role="tabpanel" aria-labelledby="tools-tab">
           <div class="row g-3">
-            <div class="col-6 col-md-4 col-lg-2">
-              <div class="skill-card">Git</div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-2">
-              <div class="skill-card">Postman</div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-2">
-              <div class="skill-card">Vite</div>
-            </div>
+            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">Git</div></div>
+            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">Postman</div></div>
+            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">Vite</div></div>
           </div>
         </div>
       </div>
@@ -646,10 +609,7 @@
                 <h3 class="mb-1">KKUN QUIZ SYSTEM</h3>
                 <small><i class="fas fa-calendar"></i> 02/2025 – 04/2025</small>
               </div>
-
-              <!-- Body -->
               <div class="p-4">
-                <!-- Features as grid -->
                 <div class="row g-3 mb-4">
                   <div class="col-md-12">
                     <div class="d-flex">
@@ -667,8 +627,6 @@
                     </div>
                   </div>
                 </div>
-
-                <!-- Tech Stack Badges -->
                 <p class="mt-3"><strong><i class="fas fa-code"></i> Tech Stack:</strong> 
                   <span class="tech-badge">Spring Boot</span>
                   <span class="tech-badge">Spring Security</span>
@@ -676,13 +634,7 @@
                   <span class="tech-badge">Redis</span>
                   <span class="tech-badge">ReactJS</span>
                 </p>
-
-                <!-- GitHub Link -->
-                <a
-                  href="https://github.com/thaihoandev/KKUN-Quiz-App"
-                  class="btn btn-outline-primary"
-                  target="_blank"
-                >
+                <a href="https://github.com/thaihoandev/KKUN-Quiz-App" class="btn btn-outline-primary" target="_blank">
                   <i class="fab fa-github"></i> 
                 </a>
               </div>
@@ -696,10 +648,7 @@
                 <h3 class="mb-1">KKUN HOTEL BOOKING</h3>
                 <small><i class="fas fa-calendar"></i> 09/2024 – 12/2024 <i class="fas fa-users"></i> Team: 02</small>
               </div>
-
-              <!-- Body -->
               <div class="p-4">
-                <!-- Features as grid -->
                 <div class="row g-3 mb-4">
                   <div class="col-md-12">
                     <div class="d-flex">
@@ -722,20 +671,12 @@
                     </div>
                   </div>
                 </div>
-
-                <!-- Tech Stack Badges -->
                 <p class="mt-3"><strong><i class="fas fa-code"></i> Tech Stack:</strong> 
                   <span class="tech-badge">Spring Boot</span>
                   <span class="tech-badge">Spring Security</span>
                   <span class="tech-badge">ReactJS</span>
                 </p>
-
-                <!-- GitHub Link -->
-                <a
-                  href="https://github.com/thaihoandev/KKUN_Booking"
-                  class="btn btn-outline-primary"
-                  target="_blank"
-                >
+                <a href="https://github.com/thaihoandev/KKUN_Booking" class="btn btn-outline-primary" target="_blank">
                   <i class="fab fa-github"></i> 
                 </a>
               </div>
@@ -773,12 +714,26 @@
     </div>
   </section>
 
+  <!-- Scroll to Top Button -->
+  <button id="scrollToTop" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+
   <!-- Footer -->
-  <footer class="bg-dark text-white py-4 text-center">
-    <p>&copy; 2025 Ngô Thái Hoàn. All rights reserved.</p>
-    <div class="mt-2">
-      <a href="https://github.com/thaihoandev" target="_blank" class="text-white mx-2 text-decoration-none">GitHub</a>
-      <a href="mailto:ngothaihoan1103@gmail.com" class="text-white mx-2 text-decoration-none">Email</a>
+  <footer class="text-white py-4">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <p>&copy; 2025 Ngô Thái Hoàn. All rights reserved.</p>
+        </div>
+        <div class="footer-section social">
+          <a href="https://github.com/thaihoandev" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/thaihoandev" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://twitter.com/thaihoandev" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+        <div class="footer-section contact">
+          <p>Email: <a href="mailto:ngothaihoan1103@gmail.com" class="text-white text-decoration-none">ngothaihoan1103@gmail.com</a></p>
+          <p>Phone: +84 916 491 863</p>
+        </div>
+      </div>
     </div>
   </footer>
 
@@ -799,6 +754,44 @@
         });
       }, { threshold: 0.1 });
       fadeIns.forEach(element => observer.observe(element));
+
+      // Scroll to top button
+      const scrollToTopBtn = document.getElementById('scrollToTop');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+          scrollToTopBtn.classList.add('visible');
+        } else {
+          scrollToTopBtn.classList.remove('visible');
+        }
+      });
+      scrollToTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      // Active navbar link on scroll
+      const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+      const sections = document.querySelectorAll('section, header.hero-section');
+
+      const updateActiveLink = () => {
+        let currentSection = '';
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop - 100; // Offset for navbar height
+          if (window.scrollY >= sectionTop) {
+            currentSection = section.getAttribute('id') || 'hero';
+          }
+        });
+
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          const href = link.getAttribute('href').substring(1);
+          if (href === currentSection || (currentSection === 'hero' && link.getAttribute('href') === '#')) {
+            link.classList.add('active');
+          }
+        });
+      };
+
+      window.addEventListener('scroll', updateActiveLink);
+      updateActiveLink(); // Initial call to set active link on page load
     });
 
     // Form submission (placeholder)
