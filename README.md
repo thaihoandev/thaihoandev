@@ -20,6 +20,7 @@
   💻 I specialize in creating modern web applications with a focus on performance and usability.
   <br>
   🌱 I’m currently learning more about full-stack development and exploring cloud technologies.
+  <br>
   📫 How to reach me: <a href="mailto:ngothaihoan1103@gmail.com">ngothaihoan1103@gmail.com</a>
 </p>
 
