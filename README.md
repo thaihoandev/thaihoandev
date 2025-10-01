@@ -1,5 +1,7 @@
 <img align="right" src="https://visitor-badge.laobi.icu/badge?page_id=ngothaihoan.ngothaihoan">
 
+# Ngô Thái Hoàn
+
 <h1 align="center">
   <a href="https://git.io/typing-svg">
     <img src="https://readme-typing-svg.herokuapp.com/?lines=Hello,+There!+👋;This+is+Ngô+Thái+Hoàn....;Nice+to+meet+you!&center=true&size=28">
@@ -9,6 +11,7 @@
 <h5 align="center">
   <code><a href="https://www.linkedin.com/in/thaihoandev" title="LinkedIn Profile"><img width="22" src="images/linkedin.svg"> LinkedIn</a></code>
   <code><a href="https://github.com/thaihoandev" title="GitHub Profile"><img width="22" src="images/github.svg"> GitHub</a></code>
+  <code><a href="https://thaihoandev.github.io/thaihoandev" title="Portfolio"><img width="22" src="images/briefcase.svg"> Portfolio</a></code>
 </h5>
 <br>
 <p align="center">
@@ -52,7 +55,6 @@
 <h2 align="center">⚡ Stats ⚡</h2>
 <br>
 <p align="center">
-
   <div align="center">
     <a href="https://github.com/denvercoder1/github-readme-streak-stats" title="Go to Source">
       <img align="left" width=390 src="https://streak-stats.demolab.com?user=thaihoandev&theme=merko&hide_border=true" alt="thaihoandev" />
