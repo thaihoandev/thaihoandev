@@ -7,8 +7,8 @@
 </h1>
 
 <h5 align="center">
-  <code><a href="https://www.linkedin.com/in/ngothaihoan" title="LinkedIn Profile"><img width="22" src="images/linkedin.svg"> LinkedIn</a></code>
-  <code><a href="https://github.com/ngothaihoan" title="GitHub Profile"><img width="22" src="images/github.svg"> GitHub</a></code>
+  <code><a href="https://www.linkedin.com/in/thaihoandev" title="LinkedIn Profile"><img width="22" src="images/linkedin.svg"> LinkedIn</a></code>
+  <code><a href="https://github.com/thaihoandev" title="GitHub Profile"><img width="22" src="images/github.svg"> GitHub</a></code>
 </h5>
 <br>
 <p align="center">
@@ -20,8 +20,6 @@
   💻 I specialize in creating modern web applications with a focus on performance and usability.
   <br>
   🌱 I’m currently learning more about full-stack development and exploring cloud technologies.
-  <br>
-  💬 Feel free to ask me anything from <a href="https://github.com/ngothaihoan/ngothaihoan/issues" title="Issues">Here</a>.
   <br>
   📫 How to reach me: <a href="mailto:ngothaihoan1103@gmail.com">ngothaihoan1103@gmail.com</a>
 </p>
@@ -84,7 +82,7 @@
 </div>
 <br/><br/><br/><br/><br/><br/>
 <div width="100%" align="center">
-  <a align="left" href="https://github.com/thaihoandev/KKUN_Booking_FE" title="KKUNBooking Front-end Project"><img align="left" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=thaihoandev&repo=KKUN_Booking_FE&theme=react&border_color=61dafb&border_radius=10"></a>
+  <a align="left" href="https://github.com/thaihoandev/KKUN-Quiz-App" title="KKUN Social Quiz System"><img align="left" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=thaihoandev&repo=KKUN-Quiz-App&theme=react&border_color=61dafb&border_radius=10"></a>
   <a align="right" href="https://github.com/thaihoandev/hotel_booking_rasa" title="hotel booking rasa"><img align="right" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=thaihoandev&repo=hotel_booking_rasa&theme=react&border_color=61dafb&border_radius=10"></a>
 </div>
 <br/><br/><br/><br/><br/><br/>
