@@ -11,7 +11,7 @@
 <h5 align="center">
   <code><a href="https://www.linkedin.com/in/thaihoandev" title="LinkedIn Profile"><img width="22" src="images/linkedin.svg"> LinkedIn</a></code>
   <code><a href="https://github.com/thaihoandev" title="GitHub Profile"><img width="22" src="images/github.svg"> GitHub</a></code>
-  <code><a href="https://thaihoandev.github.io/thaihoandev" title="Portfolio"><img width="22" src="images/porfolio.png"> Portfolio</a></code>
+  <code><a href="https://thaihoandev.github.io/thaihoandev" title="Portfolio"><img width="22" src="images/portfolio.png"> Portfolio</a></code>
 </h5>
 <br>
 <p align="center">
