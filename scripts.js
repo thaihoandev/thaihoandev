@@ -10,6 +10,16 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold: 0.1 });
   fadeIns.forEach(element => observer.observe(element));
 
+  const roleTexts = document.querySelectorAll('.role-text');
+  if (roleTexts.length > 1) {
+    let currentRole = 0;
+    setInterval(() => {
+      roleTexts[currentRole].classList.remove('is-active');
+      currentRole = (currentRole + 1) % roleTexts.length;
+      roleTexts[currentRole].classList.add('is-active');
+    }, 2600);
+  }
+
   const scrollToTopBtn = document.getElementById('scrollToTop');
   window.addEventListener('scroll', () => {
     if (window.scrollY > 300) {

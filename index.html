@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ngô Thái Hoàn - Portfolio</title>
+  <title>Ngo Thai Hoan - Software Engineer | .NET & Java</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <!-- Font Awesome for Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -47,7 +47,7 @@
           <li class="nav-item d-flex align-items-center">
             <a href="mailto:ngothaihoan1103@gmail.com" class="nav-icon"><i class="fas fa-envelope"></i></a>
             <a href="https://github.com/thaihoandev"  target="_blank" class="nav-icon"><i class="fab fa-github"></i></a>
-            <a href="#" class="nav-icon"><i class="fas fa-user"></i></a>
+            <a href="https://linkedin.com/in/thaihoandev" target="_blank" class="nav-icon"><i class="fab fa-linkedin"></i></a>
             <a href="#" class="nav-icon"><i class="fas fa-sun"></i></a>
           </li>
         </ul>
@@ -56,64 +56,116 @@
   </nav>
 
   <!-- Hero Section -->
-  <header class="hero-section">
+  <header class="hero-section" id="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-glow hero-glow-blue"></div>
+    <div class="hero-glow hero-glow-red"></div>
     <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-6 text-md-end">
-          <h4 class="fw-bold">Hi, I’m</h4>
-          <h1 class="display-4 fw-bold">Ngô Thái Hoàn</h1>
-          <p class="lead">Backend Developer | Java (Spring Boot) | Python | React</p>
-          <a href="#contact" class="btn btn-light btn-lg btn-custom mt-3 px-4 py-2 fs-5">Get in Touch</a>
+      <div class="row align-items-center gy-5">
+        <div class="col-lg-7">
+          <div class="hero-terminal">
+            <div class="hero-terminal-header">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+              <span class="hero-terminal-title">hoan@backend — zsh</span>
+            </div>
+            <div class="hero-terminal-body">
+              <p class="term-line"><span class="term-prompt">hoan@dev</span><span class="term-path">:~$</span> whoami</p>
+              <h1 class="hero-name">Ngo Thai Hoan</h1>
+              <p class="term-line mt-2"><span class="term-prompt">hoan@dev</span><span class="term-path">:~$</span> cat role.txt</p>
+              <p class="role-rotator">
+                <span class="role-text is-active">&gt; Software Engineer</span>
+                <span class="role-text">&gt; .NET (C#) Backend Developer</span>
+                <span class="role-text">&gt; Java (Spring Boot) Backend Developer</span>
+                <span class="role-text">&gt; Real-time Systems Engineer</span>
+              </p>
+              <div class="hero-tags">
+                <span class="hero-tag"><i class="fas fa-server"></i> Real-time Systems</span>
+                <span class="hero-tag"><i class="fas fa-diagram-project"></i> Clean Architecture</span>
+                <span class="hero-tag"><i class="fas fa-bolt"></i> Event-Driven Design</span>
+              </div>
+              <div class="hero-cta">
+                <a href="#contact" class="btn btn-light btn-lg btn-custom">Get in Touch</a>
+                <a href="#projects" class="btn-outline-hero">View Projects</a>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="col-md-6 text-center">
-          <div class="avatar-wrapper">
-            <img src="./images/avatar/avatar.jpg" alt="Avatar" class="avatar-img">
+        <div class="col-lg-5 text-center">
+          <div class="avatar-hex">
+            <div class="avatar-hex-border"></div>
+            <div class="avatar-hex-inner">
+              <img src="./images/avatar/avatar.jpg" alt="Avatar" class="avatar-img">
+            </div>
+            <span class="avatar-badge avatar-badge-dotnet"><i class="fas fa-hashtag"></i> C#</span>
+            <span class="avatar-badge avatar-badge-java"><i class="fab fa-java"></i> Java</span>
+            <span class="avatar-status"><span class="status-dot"></span> Open to work</span>
           </div>
         </div>
       </div>
     </div>
+    <a href="#about" class="scroll-cue" aria-label="Scroll down"><i class="fas fa-chevron-down"></i></a>
   </header>
 
   <!-- About Section -->
   <section id="about" class="py-5">
     <div class="container fade-in">
-      <div class="row align-items-center">
-        <div class="col-md-6 about-text">
-          <h2 class="section-header"><i class="fas fa-user-circle"></i> About</h2>
-          <p class="lead mb-4">Entry-level Backend Developer with a solid foundation in Java (Spring Boot) and Python, proven by independently building and deploying a full-stack personal project. Eager to contribute value to your team, quickly adapt to team processes and company culture, and grow into a fully proficient Fullstack Developer within the next 2-3 years.</p>
+      <h2 class="section-header"><i class="fas fa-user-circle"></i> About</h2>
+      <div class="row align-items-stretch g-4">
+        <div class="col-lg-6 about-text">
+          <p class="lead mb-4">Backend-focused <strong>Software Engineer</strong> with 1+ year of hands-on experience building scalable REST APIs and real-time systems in <strong>C# (ASP.NET Core)</strong> and <strong>Java (Spring Boot)</strong>. Currently shipping AIoT platforms, telemetry pipelines, and video-streaming systems in production, applying Clean Architecture, CQRS, and event-driven design to real business problems.</p>
           <p class="lead mb-4 fst-italic">"Code is poetry. Clean, scalable, and crafted with love."</p>
-          <div class="text-center">
+
+          <!-- Terminal-style personal signature card -->
+          <div class="code-card">
+            <div class="code-card-header">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+              <span class="code-card-title">whoami.cs</span>
+            </div>
+            <pre class="code-card-body"><code><span class="c-kw">public class</span> <span class="c-cls">NgoThaiHoan</span> : <span class="c-cls">ISoftwareEngineer</span>
+{
+    <span class="c-kw">public string</span>[] Stack => [<span class="c-str">"C#"</span>, <span class="c-str">".NET Core"</span>, <span class="c-str">"Java"</span>, <span class="c-str">"Spring Boot"</span>];
+    <span class="c-kw">public string</span> Focus => <span class="c-str">"Backend &amp; Real-time Systems"</span>;
+    <span class="c-kw">public string</span> CurrentlyAt => <span class="c-str">"Mebisoft JSC"</span>;
+    <span class="c-kw">public string</span> Goal => <span class="c-str">"Grow into a Senior Software Engineer"</span>;
+}<span class="cursor-blink">&nbsp;</span></code></pre>
+          </div>
+
+          <div class="text-center text-lg-start mt-4">
             <a href="./assets/pdf/ngothaihoan-resume.pdf" download class="btn btn-primary btn-custom">Download Resume</a>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="row g-4">
+        <div class="col-lg-6">
+          <div class="row g-4 h-100">
             <div class="col-6">
               <div class="about-card">
-                <i class="fas fa-code"></i>
-                <h5>Clean Code</h5>
-                <p>Writing maintainable and scalable code</p>
+                <i class="fas fa-cubes"></i>
+                <h5>Clean Architecture</h5>
+                <p>Layered, testable systems built around CQRS</p>
               </div>
             </div>
             <div class="col-6">
               <div class="about-card">
-                <i class="fas fa-globe"></i>
-                <h5>Web Applications</h5>
-                <p>Full-stack web development expertise</p>
+                <i class="fas fa-satellite-dish"></i>
+                <h5>Real-time Systems</h5>
+                <p>Event-driven pipelines, telemetry &amp; streaming</p>
               </div>
             </div>
             <div class="col-6">
               <div class="about-card">
-                <i class="fas fa-server"></i>
-                <h5>Backend Systems</h5>
-                <p>Robust API development and database design</p>
+                <i class="fas fa-shield-halved"></i>
+                <h5>API Security</h5>
+                <p>JWT &amp; RBAC hardened across 200+ endpoints</p>
               </div>
             </div>
             <div class="col-6">
               <div class="about-card">
-                <i class="fas fa-mobile-alt"></i>
-                <h5>Responsive Design</h5>
-                <p>Mobile-first approach to UI/UX</p>
+                <i class="fas fa-gauge-high"></i>
+                <h5>Performance Tuning</h5>
+                <p>Redis caching &amp; query optimization at scale</p>
               </div>
             </div>
           </div>
@@ -160,32 +212,107 @@
   <div class="container fade-in">
     <h2 class="section-header"><i class="fas fa-briefcase"></i> Experience</h2>
     <div class="timeline">
+
       <div class="timeline-item left">
         <div class="timeline-content card h-100">
           <div class="card-header bg-primary text-white p-4">
-            <h3 class="mb-1"><i class="fas fa-briefcase me-2"></i>Backend Developer Intern</h3>
-            <small class="d-block mb-1">Viettel Logistics</small>
-            <small><i class="fas fa-calendar me-2"></i>05/2025 – 10/2025</small>
-            <small><i class="fas fa-map-marker-alt me-2"></i>HCM, Viet Nam</small>
+            <div class="d-flex justify-content-between align-items-start flex-wrap gap-2">
+              <div>
+                <h3 class="mb-1"><i class="fas fa-briefcase me-2"></i>Backend Developer</h3>
+                <small class="d-block mb-1">Mebisoft JSC</small>
+                <small><i class="fas fa-calendar me-2"></i>12/2025 – Present</small>
+                <small><i class="fas fa-map-marker-alt me-2"></i>HCM, Viet Nam</small>
+              </div>
+              <a href="https://mebisoft.vn" target="_blank" class="company-link" title="Visit Mebisoft JSC website">
+                <i class="fas fa-arrow-up-right-from-square"></i> mebisoft.vn
+              </a>
+            </div>
           </div>
           <div class="card-body p-4">
             <div class="row g-3 mb-4">
               <div class="col-12">
                 <div class="d-flex align-items-start">
                   <i class="fas fa-check-circle text-primary me-2 mt-1"></i>
-                  <p class="mb-0">Scraped fueling data with Python/Flask</p>
+                  <p class="mb-0">Architected 80+ production REST APIs for device management, telemetry ingestion, and warehouse operations, processing 40K+ telemetry events/day with sub-second response times.</p>
                 </div>
               </div>
               <div class="col-12">
                 <div class="d-flex align-items-start">
                   <i class="fas fa-check-circle text-primary me-2 mt-1"></i>
-                  <p class="mb-0">Automated sync with Celery scheduler</p>
+                  <p class="mb-0">Optimized PostgreSQL queries with indexing &amp; Redis caching, cutting API latency by 45% and database load by 40% for real-time operations.</p>
                 </div>
               </div>
               <div class="col-12">
                 <div class="d-flex align-items-start">
                   <i class="fas fa-check-circle text-primary me-2 mt-1"></i>
-                  <p class="mb-0">Built ReactJS dashboard interface</p>
+                  <p class="mb-0">Built a low-latency video streaming pipeline (RTSP/WebRTC/HLS) supporting 50 concurrent camera streams with zero packet loss.</p>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="d-flex align-items-start">
+                  <i class="fas fa-check-circle text-primary me-2 mt-1"></i>
+                  <p class="mb-0">Developed a warehouse management module covering goods receiving, dispatch, and stocktaking workflows.</p>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="d-flex align-items-start">
+                  <i class="fas fa-check-circle text-primary me-2 mt-1"></i>
+                  <p class="mb-0">Applied Clean Architecture + CQRS, implemented JWT + RBAC security across 200+ endpoints, and ran 2-week Agile sprints with CI/CD automation.</p>
+                </div>
+              </div>
+            </div>
+            <p class="mt-3"><strong><i class="fas fa-code me-2"></i>Technologies Used:</strong></p>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="tech-badge">C#</span>
+              <span class="tech-badge">ASP.NET Core</span>
+              <span class="tech-badge">PostgreSQL</span>
+              <span class="tech-badge">Redis</span>
+              <span class="tech-badge">RTSP / WebRTC</span>
+              <span class="tech-badge">Docker</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item right">
+        <div class="timeline-content card h-100">
+          <div class="card-header bg-primary text-white p-4">
+            <div class="d-flex justify-content-between align-items-start flex-wrap gap-2">
+              <div>
+                <h3 class="mb-1"><i class="fas fa-briefcase me-2"></i>Backend Developer Intern</h3>
+                <small class="d-block mb-1">Viettel Logistics</small>
+                <small><i class="fas fa-calendar me-2"></i>08/2025 – 11/2025</small>
+                <small><i class="fas fa-map-marker-alt me-2"></i>HCM, Viet Nam</small>
+              </div>
+              <a href="https://viettellogistics.com.vn/en" target="_blank" class="company-link" title="Visit Viettel Logistics website">
+                <i class="fas fa-arrow-up-right-from-square"></i> viettellogistics.com.vn
+              </a>
+            </div>
+          </div>
+          <div class="card-body p-4">
+            <div class="row g-3 mb-4">
+              <div class="col-12">
+                <div class="d-flex align-items-start">
+                  <i class="fas fa-check-circle text-primary me-2 mt-1"></i>
+                  <p class="mb-0">Developed 8+ Flask APIs for logistics management; integrated external services (iGas, MISA) enabling automated e-invoice processing.</p>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="d-flex align-items-start">
+                  <i class="fas fa-check-circle text-primary me-2 mt-1"></i>
+                  <p class="mb-0">Built an asynchronous pipeline using Celery for background job processing, reducing manual invoice work by ~60%.</p>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="d-flex align-items-start">
+                  <i class="fas fa-check-circle text-primary me-2 mt-1"></i>
+                  <p class="mb-0">Implemented invoice data extraction using BeautifulSoup web scraping and parsing.</p>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="d-flex align-items-start">
+                  <i class="fas fa-check-circle text-primary me-2 mt-1"></i>
+                  <p class="mb-0">Collaborated with QA and product teams on requirements clarification, testing workflows, and system integration validation.</p>
                 </div>
               </div>
             </div>
@@ -196,11 +323,11 @@
               <span class="tech-badge">MySQL</span>
               <span class="tech-badge">BeautifulSoup</span>
               <span class="tech-badge">Celery</span>
-              <span class="tech-badge">ReactJS</span>
             </div>
           </div>
         </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -214,65 +341,69 @@
           <button class="nav-link active" id="all-tab" data-bs-toggle="pill" data-bs-target="#all" type="button" role="tab" aria-controls="all" aria-selected="true">All</button>
         </li>
         <li class="nav-item" role="presentation">
-          <button class="nav-link" id="frontend-tab" data-bs-toggle="pill" data-bs-target="#frontend" type="button" role="tab" aria-controls="frontend" aria-selected="false">Frontend</button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="backend-tab" data-bs-toggle="pill" data-bs-target="#backend" type="button" role="tab" aria-controls="backend" aria-selected="false">Backend</button>
-        </li>
-        <li class="nav-item" role="presentation">
           <button class="nav-link" id="languages-tab" data-bs-toggle="pill" data-bs-target="#languages" type="button" role="tab" aria-controls="languages" aria-selected="false">Languages</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="frameworks-tab" data-bs-toggle="pill" data-bs-target="#frameworks" type="button" role="tab" aria-controls="frameworks" aria-selected="false">Frameworks</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="architecture-tab" data-bs-toggle="pill" data-bs-target="#architecture" type="button" role="tab" aria-controls="architecture" aria-selected="false">Architecture</button>
         </li>
         <li class="nav-item" role="presentation">
           <button class="nav-link" id="databases-tab" data-bs-toggle="pill" data-bs-target="#databases" type="button" role="tab" aria-controls="databases" aria-selected="false">Databases</button>
         </li>
         <li class="nav-item" role="presentation">
-          <button class="nav-link" id="tools-tab" data-bs-toggle="pill" data-bs-target="#tools" type="button" role="tab" aria-controls="tools" aria-selected="false">Tools</button>
+          <button class="nav-link" id="tools-tab" data-bs-toggle="pill" data-bs-target="#tools" type="button" role="tab" aria-controls="tools" aria-selected="false">Tools &amp; Security</button>
         </li>
       </ul>
       <div class="tab-content" id="skillTabsContent">
         <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
           <div class="row g-3">
-            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">Java</div></div>
-            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">C#</div></div>
-            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">JavaScript</div></div>
+            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card skill-primary">C#</div></div>
+            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card skill-primary">Java</div></div>
             <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">Python</div></div>
-            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">Spring Boot</div></div>
-            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">Spring MVC</div></div>
-            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">Java Swing</div></div>
-            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">ASP.NET</div></div>
+            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">JavaScript</div></div>
+            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card skill-primary">ASP.NET Core</div></div>
+            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card skill-primary">Spring Boot</div></div>
             <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">Flask</div></div>
-            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">React</div></div>
-            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">Bootstrap</div></div>
+            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">ReactJS</div></div>
+            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">Clean Architecture</div></div>
+            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">CQRS</div></div>
+            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">Event-Driven Design</div></div>
+            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">RESTful APIs</div></div>
             <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">PostgreSQL</div></div>
             <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">MySQL</div></div>
             <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">Redis</div></div>
+            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">JWT</div></div>
+            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">RBAC</div></div>
             <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">Docker</div></div>
-            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">Git</div></div>
+            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">Nginx</div></div>
+            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">Git / GitLab</div></div>
             <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">Postman</div></div>
-            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">Vite</div></div>
-          </div>
-        </div>
-        <div class="tab-pane fade" id="frontend" role="tabpanel" aria-labelledby="frontend-tab">
-          <div class="row g-3">
-            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">React</div></div>
-            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">Bootstrap</div></div>
-          </div>
-        </div>
-        <div class="tab-pane fade" id="backend" role="tabpanel" aria-labelledby="backend-tab">
-          <div class="row g-3">
-            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">Spring Boot</div></div>
-            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">Spring MVC</div></div>
-            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">Java Swing</div></div>
-            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">ASP.NET</div></div>
-            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">Flask</div></div>
           </div>
         </div>
         <div class="tab-pane fade" id="languages" role="tabpanel" aria-labelledby="languages-tab">
           <div class="row g-3">
-            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">Java</div></div>
-            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">C#</div></div>
-            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">JavaScript</div></div>
+            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card skill-primary">C# <span class="skill-tag">Expert</span></div></div>
+            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card skill-primary">Java</div></div>
             <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">Python</div></div>
+            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">JavaScript</div></div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="frameworks" role="tabpanel" aria-labelledby="frameworks-tab">
+          <div class="row g-3">
+            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card skill-primary">ASP.NET Core (10)</div></div>
+            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card skill-primary">Spring Boot</div></div>
+            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">Flask</div></div>
+            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">ReactJS</div></div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="architecture" role="tabpanel" aria-labelledby="architecture-tab">
+          <div class="row g-3">
+            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">Clean Architecture</div></div>
+            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">CQRS</div></div>
+            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">Event-Driven Design</div></div>
+            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">RESTful APIs</div></div>
           </div>
         </div>
         <div class="tab-pane fade" id="databases" role="tabpanel" aria-labelledby="databases-tab">
@@ -284,10 +415,12 @@
         </div>
         <div class="tab-pane fade" id="tools" role="tabpanel" aria-labelledby="tools-tab">
           <div class="row g-3">
-            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">Git</div></div>
+            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">JWT</div></div>
+            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">RBAC</div></div>
             <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">Docker</div></div>
+            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">Nginx</div></div>
+            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">Git / GitLab</div></div>
             <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">Postman</div></div>
-            <div class="col-6 col-md-4 col-lg-2"><div class="skill-card">Vite</div></div>
           </div>
         </div>
       </div>
@@ -327,38 +460,44 @@
       <h2 class="section-header"><i class="fas fa-project-diagram"></i> Projects</h2>
       <div class="row g-4 equal-height-row">
 
-        <!-- KKUN QUIZ SYSTEM -->
+        <!-- KKUN QUIZ PLATFORM -->
         <div class="col-md-6">
           <div class="card h-100">
             <div class="card-header bg-primary text-white p-4">
-              <h3 class="mb-1">KKUN QUIZ SYSTEM</h3>
-              <small><i class="fas fa-calendar me-2"></i>Feb 2025 – Apr 2025</small>
+              <h3 class="mb-1">KKUN QUIZ PLATFORM</h3>
+              <small><i class="fas fa-calendar me-2"></i>Jun 2025 – Sep 2025</small>
             </div>
             <div class="card-body p-4 d-flex flex-column">
               <div class="row g-3 mb-4">
                 <div class="col-12">
                   <div class="d-flex align-items-start">
                     <i class="fas fa-check-circle text-primary me-2 mt-1"></i>
-                    <p class="mb-0">Built a social, real-time quiz platform where users create/join rooms, play competitively, and follow community-driven events.</p>
+                    <p class="mb-0">Designed an event-driven, real-time quiz platform using Apache Kafka for asynchronous event processing, supporting concurrent users with low interaction latency.</p>
                   </div>
                 </div>
                 <div class="col-12">
                   <div class="d-flex align-items-start">
                     <i class="fas fa-check-circle text-primary me-2 mt-1"></i>
-                    <p class="mb-0">Integrated in-room chat and live leaderboards to enable instant interaction and engagement during matches.</p>
+                    <p class="mb-0">Implemented Redis-based caching to cut database queries by ~40%, improving response times and scalability.</p>
                   </div>
                 </div>
                 <div class="col-12">
                   <div class="d-flex align-items-start">
                     <i class="fas fa-check-circle text-primary me-2 mt-1"></i>
-                    <p class="mb-0">Designed an OCR-based question ingestion pipeline and optimized API performance with Redis caching.</p>
+                    <p class="mb-0">Optimized PostgreSQL with indexing &amp; query tuning for real-time data access and leaderboard operations.</p>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="d-flex align-items-start">
+                    <i class="fas fa-check-circle text-primary me-2 mt-1"></i>
+                    <p class="mb-0">Built secure REST APIs with JWT authentication and a reactive React frontend for real-time quiz interactions.</p>
                   </div>
                 </div>
               </div>
               <p class="mt-3"><strong><i class="fas fa-code me-2"></i>Tech Stack:</strong></p>
               <div class="d-flex flex-wrap gap-2">
                 <span class="tech-badge">Spring Boot</span>
-                <span class="tech-badge">Spring Security</span>
+                <span class="tech-badge">Apache Kafka</span>
                 <span class="tech-badge">PostgreSQL</span>
                 <span class="tech-badge">Redis</span>
                 <span class="tech-badge">React</span>
@@ -534,7 +673,7 @@
       <h2 class="section-header"><i class="fas fa-envelope"></i> Get in Touch</h2>
       <div class="row justify-content-center w-100">
         <div class="col-md-6">
-          <p class="lead text-center mb-4">I'm always open to exciting opportunities — whether it's full-time roles, freelance projects, tech collaborations, or even a friendly conversation. Let’s connect!</p>
+          <p class="lead text-center mb-4">I'm always open to exciting opportunities — whether it's full-time roles, freelance projects, tech collaborations, or even a friendly conversation. Let's connect!</p>
           <div class="card p-4">
             <form id="contact-form">
               <div class="mb-3">
@@ -566,7 +705,7 @@
       <div class="footer-content">
         <div class="footer-section">
           <h5 class="mb-3">About</h5>
-          <p>&copy; 2025 Ngô Thái Hoàn. All rights reserved.</p>
+          <p>&copy; 2025 Ngo Thai Hoan. All rights reserved.</p>
         </div>
         <div class="footer-section social">
           <h5 class="mb-3">Social</h5>
