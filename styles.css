@@ -280,8 +280,8 @@ body {
 .avatar-hex {
   position: relative;
   z-index: 1;
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
   margin: 0 auto;
 }
 
@@ -688,7 +688,7 @@ body {
 .proficiency-fill {
   background: linear-gradient(90deg, #ffd700, #8b0000);
   height: 100%;
-  transition: width 0.5s ease;
+  transition: width 1.2s ease;
 }
 
 /* Enhanced Card Styles for Projects and Experience */
@@ -1112,5 +1112,435 @@ footer {
   .nav-icon {
     font-size: 1rem;
     margin: 0 0.3rem;
+  }
+}
+
+/* ==========================================================================
+   SIGNATURE / CHARACTER LAYER
+   Terminal-monitoring identity: scroll progress, custom cursor, live pipeline
+   canvas, glitch headers, metric counters, magnetic buttons, CRT overlay.
+   ========================================================================== */
+
+/* Scroll progress bar — reads like a build/deploy progress indicator */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, #2ecc71, #ffd700, #8b0000);
+  z-index: 2000;
+  transition: width 0.1s linear;
+  box-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
+}
+
+/* CRT scanline / vignette texture, subtle */
+.crt-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1900;
+  background:
+    repeating-linear-gradient(180deg, rgba(0, 0, 0, 0.06) 0px, rgba(0, 0, 0, 0.06) 1px, transparent 1px, transparent 3px),
+    radial-gradient(circle at 50% 50%, transparent 60%, rgba(0, 0, 0, 0.35) 130%);
+  mix-blend-mode: multiply;
+  opacity: 0.55;
+}
+
+/* Custom cursor */
+.cursor-dot,
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 2100;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.cursor-dot {
+  width: 6px;
+  height: 6px;
+  background: #ffd700;
+  box-shadow: 0 0 6px #ffd700;
+}
+
+.cursor-ring {
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(255, 215, 0, 0.55);
+  transition: opacity 0.2s ease, transform 0.15s ease, width 0.2s ease, height 0.2s ease, border-color 0.2s ease;
+}
+
+.cursor-ring.is-active,
+.cursor-dot.is-active {
+  opacity: 1;
+}
+
+.cursor-ring.is-hover {
+  width: 52px;
+  height: 52px;
+  border-color: #8b0000;
+  background: rgba(139, 0, 0, 0.08);
+}
+
+@media (hover: none),
+(pointer: coarse) {
+
+  .cursor-dot,
+  .cursor-ring {
+    display: none;
+  }
+}
+
+/* Hero pipeline canvas — the signature element: an animated event pipeline
+   behind the terminal card, echoing the event-driven / telemetry work. */
+.hero-pipeline-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0.55;
+}
+
+.hero-terminal-live {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.7rem;
+  color: #7ee89b;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Metrics strip inside hero terminal */
+.hero-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+  margin-top: 1.6rem;
+  padding-top: 1.3rem;
+  border-top: 1px dashed rgba(255, 215, 0, 0.25);
+}
+
+.hero-metric {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero-metric-value {
+  font-family: 'JetBrains Mono', 'Consolas', monospace;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #ffd700;
+  line-height: 1.1;
+}
+
+.hero-metric-label {
+  font-size: 0.68rem;
+  color: #8892b0;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-top: 0.2rem;
+}
+
+@media (max-width: 575.98px) {
+  .hero-metrics {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 1.1rem;
+  }
+}
+
+/* Glitch effect for section headers (hover-triggered, respects reduced motion) */
+.section-header[data-glitch] {
+  position: relative;
+}
+
+.section-header[data-glitch]::before,
+.section-header[data-glitch]::after {
+  content: attr(data-glitch-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.section-header[data-glitch]:hover::before {
+  content: attr(data-glitch-text);
+  color: #8b0000;
+  opacity: 0.7;
+  animation: glitch-shift-1 0.5s steps(2, jump-none) infinite;
+  clip-path: polygon(0 10%, 100% 10%, 100% 40%, 0 40%);
+}
+
+.section-header[data-glitch]:hover::after {
+  content: attr(data-glitch-text);
+  color: #3aa0ff;
+  opacity: 0.7;
+  animation: glitch-shift-2 0.45s steps(2, jump-none) infinite;
+  clip-path: polygon(0 60%, 100% 60%, 100% 90%, 0 90%);
+}
+
+@keyframes glitch-shift-1 {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(-3px, 1px);
+  }
+
+  100% {
+    transform: translate(2px, -1px);
+  }
+}
+
+@keyframes glitch-shift-2 {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(3px, -1px);
+  }
+
+  100% {
+    transform: translate(-2px, 1px);
+  }
+}
+
+/* Magnetic buttons — small lift + glow toward cursor, handled via JS transform */
+.magnetic {
+  will-change: transform;
+  transition: transform 0.15s ease, box-shadow 0.3s ease;
+}
+
+/* Subtle tilt-on-hover for cards, handled via JS transform */
+.tilt-card {
+  will-change: transform;
+  transition: transform 0.2s ease;
+}
+
+/* Contact form status line */
+.form-status {
+  font-family: 'JetBrains Mono', 'Consolas', monospace;
+  font-size: 0.8rem;
+  color: #2ecc71;
+  min-height: 1.2rem;
+}
+
+/* Footer "system status" strip */
+.footer-uptime {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px dashed rgba(255, 215, 0, 0.2);
+  text-align: center;
+  font-family: 'JetBrains Mono', 'Consolas', monospace;
+  font-size: 0.75rem;
+  color: #8892b0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.footer-uptime-clock {
+  color: #ffd700;
+}
+
+/* ==========================================================================
+   PAGE LOADER — boot-sequence intro shown on first paint
+   ========================================================================== */
+
+body.is-loading {
+  overflow: hidden;
+}
+
+.page-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 3000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #050b18;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.page-loader::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 215, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 215, 0, 0.05) 1px, transparent 1px);
+  background-size: 42px 42px;
+  pointer-events: none;
+}
+
+.page-loader.loader-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.page-loader-terminal {
+  position: relative;
+  width: min(480px, 88vw);
+  background: rgba(10, 25, 47, 0.85);
+  border: 1px solid rgba(255, 215, 0, 0.25);
+  border-radius: 14px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55);
+  overflow: hidden;
+}
+
+.page-loader-header {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #0c2340;
+  padding: 0.7rem 1.1rem;
+  border-bottom: 1px solid rgba(255, 215, 0, 0.15);
+}
+
+.page-loader-body {
+  padding: 1.5rem 1.6rem 1.8rem;
+  font-family: 'JetBrains Mono', 'Consolas', monospace;
+  font-size: 0.8rem;
+  color: #8fa3c9;
+}
+
+.loader-line {
+  margin: 0 0 0.55rem;
+  opacity: 0;
+  transform: translateY(4px);
+  animation: loader-line-in 0.4s ease forwards;
+  animation-delay: calc(var(--delay, 0) * 1ms);
+}
+
+.loader-ok {
+  color: #2ecc71;
+  font-weight: 700;
+}
+
+.loader-ready {
+  color: #ffd700;
+}
+
+.loader-cursor {
+  display: inline-block;
+  animation: blink-cursor 1s step-end infinite;
+}
+
+.loader-dots::after {
+  content: '';
+  display: inline-block;
+  width: 1.1em;
+  text-align: left;
+  animation: loader-dots-cycle 1.1s steps(4, end) infinite;
+}
+
+@keyframes loader-dots-cycle {
+  0% {
+    content: '';
+  }
+
+  25% {
+    content: '.';
+  }
+
+  50% {
+    content: '..';
+  }
+
+  75% {
+    content: '...';
+  }
+
+  100% {
+    content: '';
+  }
+}
+
+@keyframes loader-line-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.loader-progress-track {
+  margin: 0.9rem 0 1rem;
+  height: 6px;
+  border-radius: 4px;
+  background: #1a2a44;
+  overflow: hidden;
+}
+
+.loader-progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #2ecc71, #ffd700, #8b0000);
+  transition: width 1.9s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+/* Hero entrance choreography, played once the loader clears */
+.hero-terminal,
+.avatar-hex {
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+body.is-loaded .hero-terminal {
+  animation: hero-rise 0.7s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
+
+body.is-loaded .avatar-hex {
+  animation: hero-rise 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) 0.15s forwards;
+}
+
+@keyframes hero-rise {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-loader {
+    display: none;
+  }
+
+  .hero-terminal,
+  .avatar-hex {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Respect reduced motion preference across all custom animation layers */
+@media (prefers-reduced-motion: reduce) {
+
+  .avatar-hex-border,
+  .avatar-badge,
+  .status-dot,
+  .scroll-cue,
+  .role-text,
+  .fade-in,
+  .cursor-dot,
+  .cursor-ring,
+  .section-header[data-glitch]::before,
+  .section-header[data-glitch]::after {
+    animation: none !important;
+    transition: none !important;
   }
 }

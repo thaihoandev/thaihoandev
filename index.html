@@ -13,7 +13,40 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="is-loading">
+
+  <!-- Boot-sequence loader shown on first paint -->
+  <div id="pageLoader" class="page-loader" role="status" aria-label="Loading site">
+    <div class="page-loader-terminal">
+      <div class="page-loader-header">
+        <span class="dot dot-red"></span>
+        <span class="dot dot-yellow"></span>
+        <span class="dot dot-green"></span>
+        <span class="hero-terminal-title">boot.sh</span>
+      </div>
+      <div class="page-loader-body">
+        <p class="loader-line" data-delay="0">&gt; initializing system<span class="loader-dots"></span></p>
+        <p class="loader-line" data-delay="450">&gt; mounting modules: clean-architecture, cqrs, ef-core <span class="loader-ok">[ok]</span></p>
+        <p class="loader-line" data-delay="900">&gt; connecting services: redis, postgresql, kafka <span class="loader-ok">[ok]</span></p>
+        <p class="loader-line" data-delay="1350">&gt; compiling thaihoan-portfolio.exe<span class="loader-dots"></span></p>
+        <div class="loader-progress-track">
+          <div class="loader-progress-fill" id="loaderProgressFill"></div>
+        </div>
+        <p class="loader-line loader-ready" data-delay="1900">&gt; ready. welcome<span class="loader-cursor">_</span></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scanline / vignette overlay (pure CRT-terminal texture) -->
+  <div class="crt-overlay" aria-hidden="true"></div>
+
+  <!-- Scroll progress -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Custom cursor (desktop only, injected/activated via JS) -->
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
   <!-- Header / Navbar -->
   <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container-fluid">
@@ -30,7 +63,7 @@
             <a class="nav-link" href="#education">Education</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="#experience">Experiences</a>
+            <a class="nav-link" href="#experience">Experiences</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#skills">Skills</a>
@@ -57,22 +90,24 @@
 
   <!-- Hero Section -->
   <header class="hero-section" id="hero">
+    <canvas id="pipelineCanvas" class="hero-pipeline-canvas" aria-hidden="true"></canvas>
     <div class="hero-bg-grid"></div>
     <div class="hero-glow hero-glow-blue"></div>
     <div class="hero-glow hero-glow-red"></div>
     <div class="container">
       <div class="row align-items-center gy-5">
         <div class="col-lg-7">
-          <div class="hero-terminal">
+          <div class="hero-terminal tilt-card">
             <div class="hero-terminal-header">
               <span class="dot dot-red"></span>
               <span class="dot dot-yellow"></span>
               <span class="dot dot-green"></span>
               <span class="hero-terminal-title">hoan@backend — zsh</span>
+              <span class="hero-terminal-live"><span class="status-dot"></span> live</span>
             </div>
             <div class="hero-terminal-body">
               <p class="term-line"><span class="term-prompt">hoan@dev</span><span class="term-path">:~$</span> whoami</p>
-              <h1 class="hero-name">Ngo Thai Hoan</h1>
+              <h1 class="hero-name">Thai Hoan Ngo</h1>
               <p class="term-line mt-2"><span class="term-prompt">hoan@dev</span><span class="term-path">:~$</span> cat role.txt</p>
               <p class="role-rotator">
                 <span class="role-text is-active">&gt; Software Engineer</span>
@@ -85,9 +120,30 @@
                 <span class="hero-tag"><i class="fas fa-diagram-project"></i> Clean Architecture</span>
                 <span class="hero-tag"><i class="fas fa-bolt"></i> Event-Driven Design</span>
               </div>
+
+              <!-- Signature metrics strip: live "system dashboard" read on the resume's real numbers -->
+              <div class="hero-metrics" role="group" aria-label="Career metrics">
+                <div class="hero-metric">
+                  <span class="hero-metric-value" data-count="80" data-suffix="+">0</span>
+                  <span class="hero-metric-label">APIs shipped</span>
+                </div>
+                <div class="hero-metric">
+                  <span class="hero-metric-value" data-count="40" data-suffix="K+">0</span>
+                  <span class="hero-metric-label">events / day</span>
+                </div>
+                <div class="hero-metric">
+                  <span class="hero-metric-value" data-count="70" data-suffix="">0</span>
+                  <span class="hero-metric-label">camera streams</span>
+                </div>
+                <div class="hero-metric">
+                  <span class="hero-metric-value" data-count="200" data-suffix="+">0</span>
+                  <span class="hero-metric-label">endpoints secured</span>
+                </div>
+              </div>
+
               <div class="hero-cta">
-                <a href="#contact" class="btn btn-light btn-lg btn-custom">Get in Touch</a>
-                <a href="#projects" class="btn-outline-hero">View Projects</a>
+                <a href="#contact" class="btn btn-light btn-lg btn-custom magnetic">Get in Touch</a>
+                <a href="#projects" class="btn-outline-hero magnetic">View Projects</a>
               </div>
             </div>
           </div>
@@ -111,7 +167,7 @@
   <!-- About Section -->
   <section id="about" class="py-5">
     <div class="container fade-in">
-      <h2 class="section-header"><i class="fas fa-user-circle"></i> About</h2>
+      <h2 class="section-header" data-glitch><i class="fas fa-user-circle"></i> About</h2>
       <div class="row align-items-stretch g-4">
         <div class="col-lg-6 about-text">
           <p class="lead mb-4">Backend-focused <strong>Software Engineer</strong> with 1+ year of hands-on experience building scalable REST APIs and real-time systems in <strong>C# (ASP.NET Core)</strong> and <strong>Java (Spring Boot)</strong>. Currently shipping AIoT platforms, telemetry pipelines, and video-streaming systems in production, applying Clean Architecture, CQRS, and event-driven design to real business problems.</p>
@@ -135,34 +191,34 @@
           </div>
 
           <div class="text-center text-lg-start mt-4">
-            <a href="./assets/pdf/ngothaihoan-resume.pdf" download class="btn btn-primary btn-custom">Download Resume</a>
+            <a href="./assets/pdf/ngothaihoan-resume.pdf" download class="btn btn-primary btn-custom magnetic">Download Resume</a>
           </div>
         </div>
         <div class="col-lg-6">
           <div class="row g-4 h-100">
             <div class="col-6">
-              <div class="about-card">
+              <div class="about-card tilt-card">
                 <i class="fas fa-cubes"></i>
                 <h5>Clean Architecture</h5>
                 <p>Layered, testable systems built around CQRS</p>
               </div>
             </div>
             <div class="col-6">
-              <div class="about-card">
+              <div class="about-card tilt-card">
                 <i class="fas fa-satellite-dish"></i>
                 <h5>Real-time Systems</h5>
                 <p>Event-driven pipelines, telemetry &amp; streaming</p>
               </div>
             </div>
             <div class="col-6">
-              <div class="about-card">
+              <div class="about-card tilt-card">
                 <i class="fas fa-shield"></i>
                 <h5>API Security</h5>
                 <p>JWT &amp; RBAC hardened across 200+ endpoints</p>
               </div>
             </div>
             <div class="col-6">
-              <div class="about-card">
+              <div class="about-card tilt-card">
                 <i class="fas fa-gauge-high"></i>
                 <h5>Performance Tuning</h5>
                 <p>Redis caching &amp; query optimization at scale</p>
@@ -177,7 +233,7 @@
   <!-- Education Section -->
   <section id="education" class="py-5">
     <div class="container fade-in">
-      <h2 class="section-header"><i class="fas fa-graduation-cap"></i> Education</h2>
+      <h2 class="section-header" data-glitch><i class="fas fa-graduation-cap"></i> Education</h2>
       <div class="row g-4">
         <div class="col-12">
           <div class="education-card">
@@ -210,7 +266,7 @@
   <!-- Experience Section -->
 <section id="experience" class="py-5">
   <div class="container fade-in">
-    <h2 class="section-header"><i class="fas fa-briefcase"></i> Experience</h2>
+    <h2 class="section-header" data-glitch><i class="fas fa-briefcase"></i> Experience</h2>
     <div class="timeline">
 
       <div class="timeline-item left">
@@ -239,13 +295,13 @@
               <div class="col-12">
                 <div class="d-flex align-items-start">
                   <i class="fas fa-check-circle text-primary me-2 mt-1"></i>
-                  <p class="mb-0">Optimized PostgreSQL queries with indexing &amp; Redis caching, cutting API latency by 45% and database load by 40% for real-time operations.</p>
+                  <p class="mb-0">Built BackgroundService-based device orchestration workers with Redis state tracking, integrated with Azure IoT Hub Direct Methods for real-time device control.</p>
                 </div>
               </div>
               <div class="col-12">
                 <div class="d-flex align-items-start">
                   <i class="fas fa-check-circle text-primary me-2 mt-1"></i>
-                  <p class="mb-0">Built a low-latency video streaming pipeline (RTSP/WebRTC/HLS) supporting 50 concurrent camera streams with zero packet loss.</p>
+                  <p class="mb-0">Built a low-latency video streaming pipeline (RTSP/WebRTC/HLS) supporting 70 concurrent camera streams with zero packet loss.</p>
                 </div>
               </div>
               <div class="col-12">
@@ -267,6 +323,7 @@
               <span class="tech-badge">ASP.NET Core</span>
               <span class="tech-badge">PostgreSQL</span>
               <span class="tech-badge">Redis</span>
+              <span class="tech-badge">Azure IoT Hub</span>
               <span class="tech-badge">RTSP / WebRTC</span>
               <span class="tech-badge">Docker</span>
             </div>
@@ -335,7 +392,7 @@
   <!-- Skills Section with Nav Pills -->
   <section id="skills" class="py-5">
     <div class="container fade-in">
-      <h2 class="section-header"><i class="fas fa-tools"></i> Skills</h2>
+      <h2 class="section-header" data-glitch><i class="fas fa-tools"></i> Skills</h2>
       <ul class="nav nav-pills justify-content-center mb-4" id="skillTabs" role="tablist">
         <li class="nav-item" role="presentation">
           <button class="nav-link active" id="all-tab" data-bs-toggle="pill" data-bs-target="#all" type="button" role="tab" aria-controls="all" aria-selected="true">All</button>
@@ -430,7 +487,7 @@
   <!-- Language Proficiency Section -->
   <section id="language-proficiency" class="py-5">
     <div class="container fade-in">
-      <h2 class="section-header"><i class="fas fa-language"></i> Languages</h2>
+      <h2 class="section-header" data-glitch><i class="fas fa-language"></i> Languages</h2>
       <div class="language-proficiency">
         <div class="lang-item">
           <div class="lang-info">
@@ -446,7 +503,7 @@
               — Can handle everyday conversations, understand main points of clear standard input on familiar matters, and write simple technical emails.
             </div>
             <div class="proficiency-bar" aria-label="English proficiency">
-              <div class="proficiency-fill" style="width:55%;"></div>
+              <div class="proficiency-fill" data-fill="55" style="width:0%;"></div>
             </div>
           </div>
         </div>
@@ -457,7 +514,7 @@
   <!-- Projects Section -->
   <section id="projects" class="py-5">
     <div class="container fade-in">
-      <h2 class="section-header"><i class="fas fa-project-diagram"></i> Projects</h2>
+      <h2 class="section-header" data-glitch><i class="fas fa-project-diagram"></i> Projects</h2>
       <div class="row g-4 equal-height-row">
 
         <!-- KKUN QUIZ PLATFORM -->
@@ -472,25 +529,25 @@
                 <div class="col-12">
                   <div class="d-flex align-items-start">
                     <i class="fas fa-check-circle text-primary me-2 mt-1"></i>
-                    <p class="mb-0">Designed an event-driven, real-time quiz platform using Apache Kafka for asynchronous event processing, supporting concurrent users with low interaction latency.</p>
+                    <p class="mb-0">Designed an event-driven quiz engine using Apache Kafka to broadcast live questions and process answer submissions in real time.</p>
                   </div>
                 </div>
                 <div class="col-12">
                   <div class="d-flex align-items-start">
                     <i class="fas fa-check-circle text-primary me-2 mt-1"></i>
-                    <p class="mb-0">Implemented Redis-based caching to cut database queries by ~40%, improving response times and scalability.</p>
+                    <p class="mb-0">Implemented Redis caching for leaderboard/session data, cutting database queries by ~40%.</p>
                   </div>
                 </div>
                 <div class="col-12">
                   <div class="d-flex align-items-start">
                     <i class="fas fa-check-circle text-primary me-2 mt-1"></i>
-                    <p class="mb-0">Optimized PostgreSQL with indexing &amp; query tuning for real-time data access and leaderboard operations.</p>
+                    <p class="mb-0">Implemented WebSocket-based live updates for synchronized question delivery and score tracking across clients.</p>
                   </div>
                 </div>
                 <div class="col-12">
                   <div class="d-flex align-items-start">
                     <i class="fas fa-check-circle text-primary me-2 mt-1"></i>
-                    <p class="mb-0">Built secure REST APIs with JWT authentication and a reactive React frontend for real-time quiz interactions.</p>
+                    <p class="mb-0">Built secure REST APIs (JWT) with a reactive React frontend for real-time quiz interactions and score tracking.</p>
                   </div>
                 </div>
               </div>
@@ -662,7 +719,7 @@
   <!-- Certifications Section -->
   <section id="certifications" class="py-5">
     <div class="container fade-in">
-      <h2 class="section-header"><i class="fas fa-certificate"></i> Certifications</h2>
+      <h2 class="section-header" data-glitch><i class="fas fa-certificate"></i> Certifications</h2>
       <p class="lead text-center mb-4">Currently, no certifications available. Stay tuned for updates!</p>
     </div>
   </section>
@@ -670,7 +727,7 @@
   <!-- Contact Section -->
   <section id="contact" class="py-5">
     <div class="container fade-in" style="min-height: 70vh;">
-      <h2 class="section-header"><i class="fas fa-envelope"></i> Get in Touch</h2>
+      <h2 class="section-header" data-glitch><i class="fas fa-envelope"></i> Get in Touch</h2>
       <div class="row justify-content-center w-100">
         <div class="col-md-6">
           <p class="lead text-center mb-4">I'm always open to exciting opportunities — whether it's full-time roles, freelance projects, tech collaborations, or even a friendly conversation. Let's connect!</p>
@@ -688,7 +745,8 @@
                 <label for="message" class="form-label text-secondary">Message</label>
                 <textarea class="form-control" id="message" rows="4" required></textarea>
               </div>
-              <button type="button" onclick="submitForm()" class="btn btn-primary btn-custom">Send Message</button>
+              <button type="button" onclick="submitForm()" class="btn btn-primary btn-custom magnetic">Send Message</button>
+              <p id="form-status" class="form-status mt-3 mb-0" role="status" aria-live="polite"></p>
             </form>
           </div>
         </div>
@@ -705,7 +763,7 @@
       <div class="footer-content">
         <div class="footer-section">
           <h5 class="mb-3">About</h5>
-          <p>&copy; 2025 Ngo Thai Hoan. All rights reserved.</p>
+          <p>&copy; 2026 Ngo Thai Hoan. All rights reserved.</p>
         </div>
         <div class="footer-section social">
           <h5 class="mb-3">Social</h5>
@@ -719,6 +777,10 @@
           <p>Phone: +84 916 491 863</p>
           <p>Address: Phu Nhuan, HCM, Viet Nam</p>
         </div>
+      </div>
+      <div class="footer-uptime">
+        <span class="status-dot"></span> system status: <span class="footer-uptime-text">all services operational</span>
+        <span class="footer-uptime-clock" id="footerClock"></span>
       </div>
     </div>
   </footer>
